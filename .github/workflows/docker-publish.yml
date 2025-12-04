@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: vytphan/dsci-522-individual-assignment-quarto-python
+          images: ${{ secrets.DOCKER_USERNAME }}/dsci-522-individual-assignment-quarto-python
           tags: |
             type=raw, value={{sha}},enable=${{github.ref_type != 'tag' }}
             type=raw, value=latest
